@@ -1,0 +1,8 @@
+export NAME=fleetman.k8s.local
+export KOPS_STATE_STORE=s3://kubernetes-practice-state-storage
+export NODE_SIZE=t2.micro
+export MASTER_SIZE=t2.micro
+export NODE_ZONES=us-east-2a,us-east-2b,us-east-2c
+export NODE_COUNT=4
+export MASTER_ZONES=us-east-2a
+export MASTER_COUNT=1
