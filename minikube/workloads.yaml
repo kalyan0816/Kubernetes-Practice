@@ -89,7 +89,12 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: richardchesterwood/k8s-fleetman-api-gateway:resources
+          image: richardchesterwood/k8s-fleetman-api-gateway:performance
+          #image: richardchesterwood/k8s-fleetman-api-gateway:resource
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
           resources:
             requests:
               memory: 200Mi
