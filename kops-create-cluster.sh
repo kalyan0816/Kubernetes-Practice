@@ -1,1 +1,1 @@
-kops create cluster --name=fleetman.k8s.local --node-count=4 --zones=us-east-2a,us-east-2b,us-east-2c --node-size=t2.micro --master-size=t2.micro --master-zones=us-east-2a --master-count=1 --yes
+kops create cluster --name=${NAME} --node-count=${NODE_COUNT} --zones=${NODE_ZONES} --node-size=${NODE_SIZE} --master-size=${MASTER_SIZE} --master-zones=${MASTER_ZONES} --master-count=${MASTER_COUNT} --yes
