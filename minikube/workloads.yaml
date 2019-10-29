@@ -71,6 +71,11 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: production-microservice
+            - name: DBSERVER
+              valueFrom:
+                configMapKeyRef:
+                  name: global-database-config
+                  key: database.url
 
 ---
 apiVersion: apps/v1
