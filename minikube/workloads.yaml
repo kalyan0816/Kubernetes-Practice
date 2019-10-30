@@ -63,7 +63,7 @@ spec:
     spec:
       containers:
         - name: position-tracker
-          image: richardchesterwood/k8s-fleetman-position-tracker:resources
+          image: richardchesterwood/k8s-fleetman-position-tracker:release4
           resources:
             requests:
               memory: 200Mi
@@ -71,11 +71,11 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: production-microservice
-            - name: DBSERVER
-              valueFrom:
-                configMapKeyRef:
-                  name: global-database-config
-                  key: database.url
+            # - name: DBSERVER
+            #   valueFrom:
+            #     configMapKeyRef:
+            #       name: global-database-config
+            #       key: database.url
 
 ---
 apiVersion: apps/v1
